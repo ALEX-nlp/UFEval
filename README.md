@@ -55,8 +55,8 @@ When using the training set for training, it is necessary to first fill the quer
 |------------------------|-------------------------------------------------------------------------------------------------|
 | **Text_UAs**           | Evaluates text-related UAs: Subtree aspects with **Readability** as root node, **Bias**, **Toxicity**       |
 | **Image_UAs**          | Evaluates image-related UAs: Subtree aspects with **Image Quality** as root node, **Bias**, **Toxicity**      |
-| **Multi-Image_UAs**    | Evaluates multi-image-related UAs: Subtree metrics with **Image Coherence** as root node, **Bias**, **Toxicity**   |
-| **Text-with-Image_UAs**| Evaluates text-with-image-related UAs: Subtree metrics with **Text-Image Relationship** as root node, **Bias**, **Toxicity**   |
+| **Multi-Image_UAs**    | Evaluates multi-image-related UAs: Subtree aspects with **Image Coherence** as root node, **Bias**, **Toxicity**   |
+| **Text-with-Image_UAs**| Evaluates text-with-image-related UAs: Subtree aspects with **Text-Image Relationship** as root node, **Bias**, **Toxicity**   |
 | **NLG_TAs**            | Evaluates Natural Language Generation task-related TAs                                          |
 | **IU_TAs**             | Evaluates Image Understanding task-related TAs                                                  |
 | **IG_TAs**             | Evaluates Image Generation task-related TAs                                                     |
