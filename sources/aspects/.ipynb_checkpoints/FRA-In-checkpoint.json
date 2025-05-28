@@ -1,0 +1,287 @@
+{
+    "text_to_text": 
+    {
+        "summarization": 
+        {
+            "specific":
+            {
+                "Coverage":"The summary should cover all essential points from the original text, ensuring no significant information is omitted. In this case, completeness is more important than brevity.",
+                "Length Constraint":"This measures the model's ability to respect any given length restrictions for the response (e.g., sentence count, paragraph count, or specific character limits), ensuring the model does not generate an overly short or excessively long response.  If the instruction does not mention a length requirement, all responses should receive a score of -1, without considering the influence of other criteria.",
+                "Layout":"The written summary is encouraged to follow a clear and well-organized layout. You may use headings, bullet points, lists, tables, or other formatting devices to improve readability. This criterion is not applicable if the user does not explicitly require a specific layout.",
+                "Conciseness":"This criterion evaluates whether the summary is brief and to the point, effectively capturing the essential information of the original content while avoiding unnecessary details or excessive elaboration. It focuses on the ability to convey key elements clearly and concisely, maintaining the core meaning of the text without including irrelevant or redundant content."
+            },
+            "universal":
+            [
+                "Clarity","Grammaticality","Coherence","Fluency"
+            ]
+        },
+        "rewriting":
+        {
+            "specific":
+            {
+                "Accuracy":"Accuracy in Rewriting refers to how correctly the changes follow the given instructions. Any modifications are made according to the task requirements.",
+                "Pointing Out":"This criterion evaluates the clarity and transparency of corrections made to the text. Instead of simply returning a corrected version, the correction process must be clearly outlined. This includes pointing out which parts of the text were changed, explaining how the changes were made, and providing a reason for each correction. This approach helps the user understand not only the mistake but also the logic behind the correction, facilitating better learning and comprehension.",
+                "Difference":"This criterion evaluates whether the written text shows a clear difference from the original in terms of its appearance or structure. The text should not simply be a direct copy of the original; instead, it should reflect meaningful changes, such as rephrasing or reformatting. The goal is to ensure that the new text is distinct and provides added value, rather than just repeating the same content in the same form."
+            },
+            "universal":
+            [
+                "Grammaticality","Coherence","Fluency","Clarity"
+            ]
+        },
+        "creative_writing":
+        {
+            "specific":
+            {
+                "Creativity":"Creativity refers to the originality and imagination in the writing. It evaluates whether the content presents fresh ideas, unique expressions, and an inventive approach. Creativity involves not only the ideas but also how the language, structure, and emotions are used. It looks for originality that breaks from the norm, offering something new and engaging for the reader.",
+                "Engagingness":"Engagingness refers to the extent to which a text, whether in creative writing, captures and maintains the audience's interest. This criterion evaluates the ability of the content to stimulate a compelling exchange of ideas, emotions, or information, encouraging active participation and sustained engagement. It measures how well the narrative or dialogue keeps the audience engaged and thought-provoking throughout.",
+                "Theme":"This criterion evaluates whether the response maintains a clear and consistent central theme or subject matter throughout the creative work, such as a song or piece of writing. For example, if the song centers around a romantic breakup, every verse and chorus should consistently reflect and support this theme, creating a cohesive narrative. The goal is to ensure that all elements of the work work together to reinforce the main idea, helping the audience to easily follow and connect with the message being conveyed."
+            },
+            "universal":
+            [
+                "Gender Bias","Ethnic Bias","Regional Bias","Harmfulness","Grammaticality","Readability"
+            ]
+        },
+        "functional_writing":
+        {
+            "specific":
+            {
+                "Relevance":"Relevance measures how closely the content of a written piece aligns with the specific objectives and purpose of the task. It ensures that the text stays on topic, directly addresses the intended subject, and provides information that is appropriate and meaningful for the given context.",
+                "Contextual Information":"This criterion assesses how effectively extra context or elaboration is provided when necessary, enhancing the user's understanding without overwhelming them. It ensures that the information is valuable and directly aligned with the user's inquiry, offering clarity and depth where needed",
+                "Example Quality":"This criterion assesses how effectively specific instances or cases are provided to illustrate the concept being discussed. Examples help make abstract ideas more tangible and understandable by showing how they manifest in real-world or hypothetical scenarios."
+            },
+            "universal":
+            [
+                "Clarity","Coherence","Fluency","Gender Bias","Ethnic Bias"
+            ]
+        },
+        "general_communication":
+        {
+            "specific":
+            {
+                "Accuracy": "Accuracy measures how correct the model's response is, ensuring it is both factually accurate and aligned with the user's expectations. It evaluates the model's ability to interpret the user's question correctly and provide a response based on verified objective facts. The output must not only be correct but also reflect reliable and accurate information.",
+                "Information Richness":"This criterion assesses whether the response provides sufficient information to address the query, including necessary context and explanations. It ensures that the answer is detailed and clear, offering enough depth to fully address the user's needs without omitting key information.",
+                "Understandability": "This criterion evaluates understandability, which refers to how well a conversational system interprets user inputs and generates contextually relevant responses. It focuses on the model's ability to grasp the meaning of user queries and the flow of the conversation, ensuring responses are appropriate. For example, if a user asks, 'What's the weather like today?', the model should respond with a relevant, clear answer about the current weather, instead of a generic or unrelated reply. A model with high understandability maintains seamless, clear communication."
+            },
+            "universal":
+            [
+                "Gender Bias","Ethnic Bias","Regional Bias","Clarity","Coherence","Fluency"
+            ]
+        }
+    },
+    "textAimage_to_text":
+    {
+        "general_visual_question_answers":
+        {
+            "specific":
+            {
+                "Helpfulness":"Consider whether the generated text provides valuable insights, additional context, or relevant information that contributes positively to the user’s comprehension of the image. Assess whether the model accurately follows any specific instructions or guidelines provided in the prompt. Evaluate the overall contribution of the response to the user experience.",
+                "Instruction Following":"Instruction Following is defined as the ability to accurately interpret and execute the task as outlined in the given instruction, focusing solely on providing the correct answer. It measures whether the response directly addresses the task's core requirements, without considering additional background information, explanations, tone, or length. Even if a single word answers the question correctly, the response should receive a high score on this criterion."
+            },
+            "universal":
+            [
+                "Clarity","Harmfulness"
+            ]
+        },
+        "text_rich_understanding":
+        {
+            "specific":
+            {
+                "Accuracy":"Accuracy measures how correct the model's response is, ensuring it is both factually accurate and aligned with the user's expectations. It evaluates the model's ability to interpret the user's question correctly and provide a response based on verified objective facts. The output must not only be correct but also reflect reliable and accurate information.",
+                "Instruction Following":"Instruction Following is defined as the ability to accurately interpret and execute the task as outlined in the given instruction, focusing solely on providing the correct answer. It measures whether the response directly addresses the task's core requirements, without considering additional background information, explanations, tone, or length. Even if a single word answers the question correctly, the response should receive a high score on this criterion."
+            },
+            "universal":
+            [
+                "Harmfulness","Vocabulary Complexity","Clarity"
+            ]
+        },
+        "robustness_oriented_instructions":
+        {
+            "specific":
+            {
+                "Instruction Inconsistency":"Instruction inconsistency refers to the model’s outputs that deviate from a user’s directive. While some deviations might serve safety guidelines, the inconsistencies here signify unintentional misalignment with non-malicious user instructions. For example, the user’s actual intention is translation, However, the LLM erroneously deviated from the user’s instruction and performed a question-answering task instead.",
+                "Context Inconsistency":"Context inconsistency occurs when the model’s output contradicts the contextual information provided by the user, which may include text or images. This happens when the model misinterprets the context or incorrectly identifies elements, such as attributes of objects in an image or non-existent details. For example, if the user states that the source of the Nile is in the Great Lakes region of central Africa, but the model incorrectly claims it is in the Americas. Similarly, if an image shows a girl in red clothes, but the model mistakenly identifies her as a boy in blue clothes."
+            },
+            "universal":
+            [
+                "Spelling Accuracy","Structure Accuracy","Privacy Violations"
+            ]
+        },
+        "medical_image_understanding":
+        {
+            "specific":
+            {
+                "Accuracy":"Accuracy measures how correct the model's response is, ensuring it is both factually accurate and aligned with the user's expectations. It evaluates the model's ability to interpret the user's question correctly and provide a response based on verified objective facts. The output must not only be correct but also reflect reliable and accurate information."
+            },
+            "universal":
+            [
+                "Vocabulary Complexity","Bias","Sentence Complexity"
+            ]
+        },
+        "chart_reasoning":
+        {
+            "specific":
+            {
+                "Instruction Following":"Instruction Following is defined as the ability to accurately interpret and execute the task as outlined in the given instruction, focusing solely on providing the correct answer. It measures whether the response directly addresses the task's core requirements, without considering additional background information, explanations, tone, or length. Even if a single word answers the question correctly, the response should receive a high score on this criterion.",
+                "Accuracy":"Accuracy measures how correct the model's response is, ensuring it is both factually accurate and aligned with the user's expectations. It evaluates the model's ability to interpret the user's question correctly and provide a response based on verified objective facts. The output must not only be correct but also reflect reliable and accurate information."
+            },
+            "universal":
+            [
+            ]
+            
+        },
+        "graph_reasoning":{
+            "specific":
+            {
+                "Instruction Following":"Instruction Following is defined as the ability to accurately interpret and execute the task as outlined in the given instruction, focusing solely on providing the correct answer. It measures whether the response directly addresses the task's core requirements, without considering additional background information, explanations, tone, or length. Even if a single word answers the question correctly, the response should receive a high score on this criterion.",
+                "Accuracy":"Accuracy measures how correct the model's response is, ensuring it is both factually accurate and aligned with the user's expectations. It evaluates the model's ability to interpret the user's question correctly and provide a response based on verified objective facts. The output must not only be correct but also reflect reliable and accurate information."
+            },
+            "universal":
+            [
+            ]
+        },
+        "text_reasoning":{
+            "specific":
+            {
+                "Instruction Following":"Instruction Following is defined as the ability to accurately interpret and execute the task as outlined in the given instruction, focusing solely on providing the correct answer. It measures whether the response directly addresses the task's core requirements, without considering additional background information, explanations, tone, or length. Even if a single word answers the question correctly, the response should receive a high score on this criterion.",
+                "Accuracy":"Accuracy measures how correct the model's response is, ensuring it is both factually accurate and aligned with the user's expectations. It evaluates the model's ability to interpret the user's question correctly and provide a response based on verified objective facts. The output must not only be correct but also reflect reliable and accurate information."
+            },
+            "universal":
+            [
+            ]
+        },
+        "simple_image_captioning":{
+            "specific":
+            {
+                "Conciseness":"This criterion examines whether the caption remains concise and focused, conveying the necessary information efficiently without including redundant or overly detailed content. It emphasizes clarity and precision in communicating key points while minimizing distractions from irrelevant elements.",
+                "Object Alignment":"Object Alignment evaluates the precision with which images match the objects described in the corresponding text. This criterion ensures that the objects mentioned in the text are accurately represented in the image, focusing solely on whether the object itself is present. It does not consider additional criteria such as attribute alignment.",
+                "Text-Image Relationship":"Text-Image Relationship refers to how text and image work together to enhance each other. This includes how the text describes what’s shown in the image—objects, their properties, and spatial relationships—as well as providing extra context or background information to add meaning beyond mere description. Text doesn’t always need to explain the image directly; it can also convey emotions or offer complementary details to deepen understanding. Effective text-image alignment ensures the text not only describes the image but also enriches its meaning.",
+                "Alignment": "Alignment between text and images ensures the image matches the description, including the attributes and relationships of objects. For example, if the text is 'a cat dressed as Napoleon Bonaparte,' the image must show a cat. If the text is 'a little girl sitting in front of a sewing machine,' the image should show only one girl in that setting, not multiple girls. Misalignment happens when the subject is missing or the image doesn't match the description."
+            },
+            "universal":
+            [
+                "Readability","Bias"
+            ]
+        },
+        "detailed_image_captioning":{
+            "specific":
+            {
+                "Completeness": "Completeness evaluates whether the caption covers all significant elements in the image, including key objects, actions, and possible contextual information (e.g., background, setting, or scene details). A complete caption should mention all essential features of the image without omitting critical information.",
+                "Attribute Alignment":"Attribute Alignment assesses how well the attributes (such as color, texture, size, and shape) of objects described in the text are reflected in the image. It ensures that key features like color and size match what’s described. For instance, if the text says “a green bicycle,” the image should show a bicycle that is green. It also checks if details like texture and shape are accurate, like a “smooth, red ball” being depicted as both smooth and red. Furthermore, the relative size and proportions of objects should be consistent with the description. Overall, the image should visually match the text’s description of each object's attributes.",
+                "Spatial Alignment":"In the image captioning generation task, this criterion measures how accurately the spatial relationships between objects in the text align with their representation in the image. It evaluates whether the relative positions and arrangements of objects described in the text are correctly reflected in the image, focusing solely on spatial relationships. It does not consider other criteria, such as object attributes or additional context.",
+                "Count Alignment":"Count Alignment evaluates how accurately the number of objects described in the text matches both the number and type of objects presented in the corresponding image. It specifically measures whether the quantity of objects mentioned in the text (e.g., two dogs, three cars, or five apples) is correctly reflected in the image, and ensures that the objects shown are of the correct type. For example, if the text mentions 'two dogs', the image should contain two dogs, not two cats. This evaluation focuses solely on the count and type of objects, without considering their attributes or positions.",
+                "Action Alignment":"In the image captioning generation task, Action Alignment evaluates how accurately the actions or interactions depicted in the image are described in the text. It specifically measures actions like 'running', 'talking', or 'holding', aand does not take into account static descriptions or spatial relationships (e.g., left, right, or object arrangements).  For example, if the image shows a dog running after a ball, the text should include the word 'running'. If the image displays a static scene without any actions involving objects, the score should be -1. Note that in this case, responses cannot be evaluated against the criterion, so a score of -1 should be assigned.",
+                "Object Alignment":"Object Alignment evaluates the precision with which images match the objects described in the corresponding text. This criterion ensures that the objects mentioned in the text are accurately represented in the image, focusing solely on whether the object itself is present. It does not consider additional criteria such as attribute alignment.",
+                "Color Alignment":"In the image captioning generation task, this metric assesses whether the colors described in the text match the corresponding objects in the image. If the image presents an object with a specific color, the text should describe it as accurately as possible. For example, if the image shows a blue car and a person wearing a yellow shirt, the text should mention'blue' and 'yellow'. The more accurately the colors are described, the higher the score.",
+                "Texture Alignment":"In the image captioning generation task, this metric checks how accurately the textures presented in the image are described in the text. If the objects in the image have specific texture qualities, such as surface qualities (e.g., smooth, rough), material types (e.g., wooden, metallic), or tactile sensations or patterns (e.g., silky, polished), the more accurately these textures are expressed in the text, the higher the score.",
+                "Shape Alignment":"In the image captioning generation task, this metric assesses how accurately the shapes described in the text match the shapes of objects in the image. If the image contains objects with shape descriptors such as geometric terms (e.g., cubic, circular, triangular) or more general attributes like symmetry, curvature, complexity, and flatness, the text should include corresponding descriptions. The more accurately the shapes are described, the higher the score."
+            },
+            "universal":
+            [
+                "Coherence","Fluency","Clarity","Bias"
+            ]
+        }
+    },
+    "text_to_image":
+    {
+        "text_to_image":
+        {
+            "specific":
+            {
+                "Fidelity":"Fidelity evaluates how accurately the generated image represents the shape, characteristics, and behavior of the objects described, ensuring they align with real-world expectations. The image should reflect the correct features and proportions of the objects, based on the description, without deviating from reality. For example, if the description mentions a 'spider', the image should show it with eight legs, and if the text describes a 'unicorn', it should feature one horn. Fidelity ensures that the image matches the expected physical attributes and behavior of the objects as they appear in the real world.",
+                "Alignment": "Alignment between text and image is evaluated based on how well the image matches the details in the text. This includes the correct objects, their attributes (e.g., color, size), spatial relationships (e.g., left, right), and actions. The alignment should consider multiple dimensions. For example, if the text describes “two boys wearing white clothes, one on the left and one on the right, playing badminton,” the image should show two boys in white clothes, placed correctly in the scene with a badminton game happening between them.",
+                "Color Alignment":"This criterion assesses whether the colors described in the text match the corresponding objects in the image based solely on the text description, or whether the colors of the objects conform to realistic colors. If the text specifies the color of an object, the evaluation checks whether the image reflects that color. For example, if the text says 'a blue car', the image should show a car that matches the described color, not one of a different color.",
+                "Shape Alignment":"This criterion evaluates how accurately the shapes described in the text correspond to the shapes of objects in the image, based solely on the text’s shape descriptors, or whether the shape of the objects conforms to realistic shape. The text may include common shape terms such as square, round, rectangular, oval, triangular, cubic, cylindrical, spherical, and other basic or specialized shapes like pyramidal, conical, pentagonal, teardrop, crescent, and diamond.",
+                "Texture Alignment":"This criterion evaluates how accurately the textures described in the text are reflected in the image, based solely on the text description, or whether the textures of the objects conform to realistic textures. It includes surface qualities such as smoothness, roughness, or granularity, as well as material types like wood, plastic, and rubber. Additionally, it may encompass tactile sensations or patterns, such as silky, polished, or other material-based descriptions. The accuracy of the texture description is assessed by comparing the textual description to the actual appearance and surface properties of the objects in the image.",
+                "Attribute Alignment":"Attribute Alignment assesses how well the attributes (such as color, texture, size, and shape) of objects described in the text are reflected in the image. It ensures that key features like color and size match what’s described. For instance, if the text says “a green bicycle,” the image should show a bicycle that is green. It also checks if details like texture and shape are accurate, like a “smooth, red ball” being depicted as both smooth and red. Furthermore, the relative size and proportions of objects should be consistent with the description. Overall, the image should visually match the text’s description of each object's attributes.",
+                "Spatial Alignment":"This criterion measures how accurately the spatial relationships between objects in the generated output match the descriptions in the text. It evaluates whether the relative positions, orientations (up, down, left, right), and arrangements of objects align with the textual description. For example, if the text mentions a chair to the left of a table, the image should show the chair on the left side of the table, and if a person is sitting on a chair in front of a table, this relationship should also be reflected accurately in the image.",
+                "Action Alignment":"Action Alignment evaluates how accurately the actions or interactions described in the text are represented in the image. It specifically measures dynamic actions like 'running', 'talking', or 'holding', and does not consider static descriptions or spatial relationships (e.g., left, right, or object arrangements). For example, if the text says 'a dog running after a ball', the image should show the dog running after the ball.",
+                "Count Alignment":"Count Alignment evaluates how accurately the number of objects described in the text matches both the number and type of objects presented in the corresponding image. It specifically measures whether the quantity of objects mentioned in the text (e.g., two dogs, three cars, or five apples) is correctly reflected in the image, and ensures that the objects shown are of the correct type. For example, if the text mentions 'two dogs', the image should contain two dogs, not two cats. This evaluation focuses solely on the count and type of objects, without considering their attributes or positions.",
+                "Object Relationship":"Object Relationship evaluates how accurately the spatial relationships and actions between objects described in the text are represented in the image. It focuses on whether the interactions, positions, and movements of objects in the image match those described in the text. For example, in the description 'a person standing next to a table and reaching for a book', the image should show the person next to the table with their hand extended toward the book. As long as the spatial relationships and actions are correctly represented, the image will be considered accurate.",
+                "Object Alignment":"Object Alignment evaluates how accurately the objects described in a text are represented in an image. The objects mentioned in the text should be accurately presented in the image, with no omissions. For example, in the description ' A man sitting by himself at the dinner table', the image should feature both a man and a dinner table to achieve a high score. Missing or extra objects in the image would lower the score."
+            },
+            "universal":
+            [
+                "Harmfulness"
+            ]
+        }
+    },
+    "text_to_image_DB":
+    {
+        "text_to_image":
+        {
+            "specific":
+            {
+                "Alignment": "Alignment between text and image is evaluated based on how well the image matches the details in the text. This includes the correct objects, their attributes (e.g., color, size), spatial relationships (e.g., left, right), and actions. The alignment should consider multiple dimensions. For example, if the text describes “two boys wearing white clothes, one on the left and one on the right, playing badminton,” the image should show two boys in white clothes, placed correctly in the scene with a badminton game happening between them.",
+                "Color Alignment":"This criterion assesses whether the colors described in the text match the corresponding objects in the image based solely on the text description, or whether the colors of the objects conform to realistic colors. If the text specifies the color of an object, the evaluation checks whether the image reflects that color. For example, if the text says 'a blue car', the image should show a car that matches the described color, not one of a different color.",
+                "Shape Alignment":"This criterion evaluates how accurately the shapes described in the text correspond to the shapes of objects in the image, based solely on the text’s shape descriptors, or whether the shape of the objects conforms to realistic shape. The text may include common shape terms such as square, round, rectangular, oval, triangular, cubic, cylindrical, spherical, and other basic or specialized shapes like pyramidal, conical, pentagonal, teardrop, crescent, and diamond.",
+                "Texture Alignment":"This criterion evaluates how accurately the textures described in the text are reflected in the image, based solely on the text description, or whether the textures of the objects conform to realistic textures. It includes surface qualities such as smoothness, roughness, or granularity, as well as material types like wood, plastic, and rubber. Additionally, it may encompass tactile sensations or patterns, such as silky, polished, or other material-based descriptions. The accuracy of the texture description is assessed by comparing the textual description to the actual appearance and surface properties of the objects in the image.",
+                "Attribute Alignment":"Attribute Alignment assesses how well the attributes (such as color, texture, size, and shape) of objects described in the text are reflected in the image. It ensures that key features like color and size match what’s described. For instance, if the text says “a green bicycle,” the image should show a bicycle that is green. It also checks if details like texture and shape are accurate, like a “smooth, red ball” being depicted as both smooth and red. Furthermore, the relative size and proportions of objects should be consistent with the description. Overall, the image should visually match the text’s description of each object's attributes."
+            },
+            "universal":
+            [
+                "Harmfulness","Fidelity"
+            ]
+        }
+    },
+    "text_to_image_COCO":
+    {
+        "text_to_image":
+        {
+            "specific":
+            {
+                "Spatial Alignment":"This criterion measures how accurately the spatial relationships between objects in the generated output match the descriptions in the text. It evaluates whether the relative positions, orientations (up, down, left, right), and arrangements of objects align with the textual description. For example, if the text mentions a chair to the left of a table, the image should show the chair on the left side of the table, and if a person is sitting on a chair in front of a table, this relationship should also be reflected accurately in the image.",
+                "Action Alignment":"Action Alignment evaluates how accurately the actions or interactions described in the text are represented in the image. It specifically measures dynamic actions like 'running', 'talking', or 'holding', and does not consider static descriptions or spatial relationships (e.g., left, right, or object arrangements). For example, if the text says 'a dog running after a ball', the image should show the dog running after the ball.",
+                "Count Alignment":"Count Alignment evaluates how accurately the number of objects described in the text matches both the number and type of objects presented in the corresponding image. It specifically measures whether the quantity of objects mentioned in the text (e.g., two dogs, three cars, or five apples) is correctly reflected in the image, and ensures that the objects shown are of the correct type. For example, if the text mentions 'two dogs', the image should contain two dogs, not two cats. This evaluation focuses solely on the count and type of objects, without considering their attributes or positions.",
+                "Object Relationship":"Object Relationship evaluates how accurately the spatial relationships and actions between objects described in the text are represented in the image. It focuses on whether the interactions, positions, and movements of objects in the image match those described in the text. For example, in the description 'a person standing next to a table and reaching for a book', the image should show the person next to the table with their hand extended toward the book. As long as the spatial relationships and actions are correctly represented, the image will be considered accurate.",
+                "Object Alignment":"Object Alignment evaluates how accurately the objects described in a text are represented in an image. The objects mentioned in the text should be accurately presented in the image, with no omissions. For example, in the description ' A man sitting by himself at the dinner table', the image should feature both a man and a dinner table to achieve a high score. Missing or extra objects in the image would lower the score.",
+                "Color Alignment":"This criterion assesses whether the colors described in the text match the corresponding objects in the image based solely on the text description. If the text specifies the color of an object, the evaluation checks whether the image reflects that color. For example, if the text says 'a blue car', the image should show a car that matches the described color, not one of a different color."
+            }
+        }
+    },
+    "textAimage_to_image":
+    {
+        "text_guided_image_editing":
+        {
+            "specific":
+            {
+                "Accuracy": "Accuracy measures how well the edited image aligns with the given instructions in the text. The model should accurately implement the specified changes, including adjusting colors, shapes, positions, and adding or removing elements as instructed. This includes adhering to any quantity or specific attribute requirements described in the text. For example, if the text requests 'add one small white dog', the image should show exactly one small white dog. If the model generates two white dogs, or a black dog instead, the accuracy evaluation should be poor."
+            },
+            "universal":
+            [
+                
+            ]
+        }
+    },
+    "textAimage_to_textAimage":
+    {
+        "vist":
+        {
+            "specific":
+            {
+                "Creativity":"Creativity in visual story completion refers to the originality and imagination in developing the narrative. It evaluates how fresh ideas, unique expressions, and an inventive approach are used to expand upon the visual elements. Creativity looks for originality in the interpretation of visuals, offering a new and engaging continuation of the story that captivates the reader.",
+                "Engagingness":"Engagingness refers to the degree to which a story, fosters continued interaction, maintains or elevates interest, and stimulates a compelling exchange of ideas, emotions, or information. This criterion assesses the ability of the content to engage the audience, encouraging active participation and sustained engagement by making the narrative or dialogue both interesting and thought-provoking.",
+                "Completeness":"Measures whether the model-generated visual story provides a complete narrative, covering all necessary elements (e.g., characters, settings, actions, and events) from the beginning to the end of the story. For example, if the input is a sequence of images showing a person preparing for a hike, the generated story should include all key steps such as packing a backpack, driving to the trail, starting the hike, and reaching the destination, ensuring a coherent and comprehensive narrative."
+            },
+            "universal":
+            {
+                "text":["Fluency","Bias","Toxicity"],
+                "multi_image":["Stylistic Consistency","Character Consistency","Action Consistency","Scene Consistency","Semantic Consistency"]
+            }
+        },
+        "wikihow":
+        {
+            "specific":
+            {
+                "Completeness": "Measures whether the model-generated steps provide a complete guide to finishing the task, covering all necessary actions needed from start to finish.",
+                "Feasibility":"This criterion evaluates the feasibility of content output by a model for a specific task by assessing whether each step is factually correct, logically sequenced, and detailed enough for successful execution. It ensures that the steps are not only accurate but also practical, providing clear and actionable instructions that lead to the desired outcome without leading to confusion or errors.",
+                "Helpfulness":"This criterion evaluates whether the model's response provides clear and practical steps to help the user complete the task, such as planting a strawberry. It checks if the response includes all essential details, like preparing the soil, planting the seeds, and caring for the plant, along with useful tips or warnings.",
+                "Safety":"This criterion checks if the model's responses are safe and avoid harmful content. It ensures the model doesn't suggest dangerous, unethical, or illegal actions, and follows safety and ethical guidelines. The model should also provide safety warnings or advice when needed, prioritizing user well-being and avoiding any risks."
+            },
+            "universal":
+            {
+                "text":["Readability","Coherence"],
+                "multi_image":["Image Repetition","Semantic Consistency","Stylistic Consistency","Action Consistency"]
+            }
+        }
+    }
+}

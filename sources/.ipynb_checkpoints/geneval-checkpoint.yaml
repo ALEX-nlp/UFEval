@@ -1,0 +1,7 @@
+model_name_or_path: ./models/GenEval-7B
+
+template: qwen2_vl
+infer_backend: huggingface  # choices: [huggingface, vllm]
+finetuning_type: full
+max_new_tokens: 4096
+max_length: 8192

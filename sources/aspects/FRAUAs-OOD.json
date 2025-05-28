@@ -1,0 +1,152 @@
+{
+    "text_to_text": 
+    {
+        "summarization": 
+        {
+            "specific":
+            {
+
+            },
+            "universal":
+            [
+                "Sentence Complexity","Vocabulary Complexity","Readability","Spelling Accuracy","Structure Accuracy","Text Repetition"
+            ]
+        },
+        "rewriting":
+        {
+            "specific":
+            {
+            },
+            "universal":
+            [
+                "Readability","Spelling Accuracy","Structure Accuracy","Text Repetition","Tense Consistency"
+            ]
+        },
+        "creative_writing":
+        {
+            "specific":
+            {
+                
+            },
+            "universal":
+            [
+                "Coherence","Fluency","Clarity","Text Repetition","Sentence Complexity","Vocabulary Complexity"
+            ]
+        },
+        "functional_writing":
+        {
+            "specific":
+            {
+               
+            },
+            "universal":
+            [
+                "Readability","Spelling Accuracy","Structure Accuracy","Sentence Complexity","Vocabulary Complexity"
+            ]
+        },
+        "general_communication":
+        {
+            "specific":
+            {
+                
+            },
+            "universal":
+            [
+                "Readability","Harmfulness","Sentence Complexity","Vocabulary Complexity","Grammaticality"
+            ]
+        }
+    },
+    "textAimage_to_text":
+    {
+        "general_visual_question_answers":
+        {
+            "specific":
+            {
+            },
+            "universal":
+            [
+                "Fluency","Coherence","Grammaticality","Readability"
+            ]
+        },
+        "text_rich_understanding":
+        {
+            "specific":
+            {
+                
+            },
+            "universal":
+            [
+                "Fluency","Coherence","Grammaticality","Readability"
+            ]
+        },
+        "robustness_oriented_instructions":
+        {
+            "specific":
+            {
+                
+            },
+            "universal":
+            [
+                "Readability","Bias","Fluency","Coherence"
+            ]
+        },
+        "medical_image_understanding":
+        {
+            "specific":
+            {
+    
+            },
+            "universal":
+            [
+                "Fluency","Coherence","Readability","Grammaticality"
+            ]
+        },
+        "simple_image_captioning":{
+            "specific":
+            {
+                
+            },
+            "universal":
+            [
+                "Fluency","Clarity","Ethnic Bias","Coherence","Sentence Complexity","Vocabulary Complexity"
+            ]
+        },
+        "detailed_image_captioning":{
+            "specific":
+            {
+            
+            },
+            "universal":
+            [
+                "Readability","Grammaticality","Sentence Complexity","Vocabulary Complexity","Ethnic Bias"
+            ]
+        }
+    },
+    "textAimage_to_textAimage":
+    {
+        "vist":
+        {
+            "specific":
+            {
+                
+            },
+            "universal":
+            {
+                "text":["Readability","Coherence","Grammaticality"],
+                "multi_image":["Image Repetition","Semantic Consistency"]
+            }
+        },
+        "wikihow":
+        {
+            "specific":
+            {
+               
+            },
+            "universal":
+            {
+                "text":["Clarity","Grammaticality","Fluency"],
+                "multi_image":["Scene Consistency"]
+            }
+        }
+    }
+}
