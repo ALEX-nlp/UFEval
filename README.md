@@ -46,8 +46,7 @@ pip install vllm
 ```
 
 ### Model
-Our model is now available on huggingface hub:\n
-You can also find GenEval-7B and GenEval-72B in the model directory.
+Our model is now available on huggingface hub:
 
 ### Fine-tuning
 
