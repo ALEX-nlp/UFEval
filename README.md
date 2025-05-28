@@ -107,13 +107,10 @@ python3 vllm.py --model_name_or_path MODEL_PATH --dataset DATA_PATH
 
 ## Citation
 ```
-@misc{hong2025frabenchgenevalscalingfinegrained,
-      title={FRAbench and GenEval: Scaling Fine-Grained Aspect Evaluation across Tasks, Modalities}, 
-      author={Shibo Hong and Jiahao Ying and Haiyuan Liang and Mengdi Zhang and Jun Kuang and Jiazheng Zhang and Yixin Cao},
-      year={2025},
-      eprint={2505.12795},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2505.12795}, 
+@article{hong2025frabench,
+  title={FRAbench and GenEval: Scaling Fine-Grained Aspect Evaluation across Tasks, Modalities},
+  author={Hong, Shibo and Ying, Jiahao and Liang, Haiyuan and Zhang, Mengdi and Kuang, Jun and Zhang, Jiazheng and Cao, Yixin},
+  journal={arXiv preprint arXiv:2505.12795},
+  year={2025}
 }
 ```
