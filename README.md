@@ -46,7 +46,7 @@ pip install vllm
 ```
 
 ### Model
-Our GenEval-7B is now available on huggingface hub: [GenEval](https://huggingface.co/SPUH/GenEval)
+Our GenEval-7B is now available on huggingface: [GenEval](https://huggingface.co/SPUH/GenEval)
 
 ### Fine-tuning
 
