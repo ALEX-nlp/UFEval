@@ -5,7 +5,7 @@ This is the official repository for our paper: [FRABench and GenEval: Scaling Fi
 
 ## Introduction
 
-We propose FRABench, a large-scale pairwise evaluation dataset across four tasks-Natural Language Generation(NLG), Image Understanding(IU), Image Generation(IG), and Interleaved Text-and-Image Generation(ITIG)- comprising 28 sub-tasks and 60.4k pairwise samples with 325k evaluation labels, which is based on our constructed evaluation aspect tree. Our constructed aspect tree includes 112 distinct aspects, categorized into Universal Aspects (UAs) and Task-specific Aspects (TAs). Once the application scenario is specified, human or automated evaluators can simply traverse our aspect tree to select the relevant ones. This design dramatically lowers the cognitive load of defining evaluation standards and promotes consistency across tasks and modalities.
+We propose FRABench, a large-scale pairwise evaluation dataset across four tasks - Natural Language Generation(NLG), Image Understanding(IU), Image Generation(IG), and Interleaved Text-and-Image Generation(ITIG)- comprising 28 sub-tasks and 60.4k pairwise samples with 325k evaluation labels, which is based on our constructed evaluation aspect tree. Our constructed aspect tree includes 112 distinct aspects, categorized into Universal Aspects (UAs) and Task-specific Aspects (TAs). Once the application scenario is specified, human or automated evaluators can simply traverse our aspect tree to select the relevant ones. This design dramatically lowers the cognitive load of defining evaluation standards and promotes consistency across tasks and modalities.
 
 Based on FRABench, we propose GenEval, a 7B-parameter large multimodal model (LMM), which is the first evaluator capable of fine-grained evaluation across tasks and modalities. By leveraging aspect-level evaluation, it achieves generalization ability across both tasks and aspects. 
 
@@ -46,7 +46,7 @@ pip install vllm
 ```
 
 ### Model
-Our GenEval-7B is now available on huggingface: [GenEval](https://huggingface.co/SPUH/GenEval)
+Our GenEval-7B is now available on Huggingface: [GenEval](https://huggingface.co/SPUH/GenEval)
 
 ### Fine-tuning
 
@@ -95,14 +95,14 @@ We provide two approaches for evaluation:
 1. Sequential Label Generation
 The inference.py script includes evaluation examples for four distinct tasks. Run the following command:
 ```
-python3 generate.py ./sources/geneval.yaml --task NLG (or IU/IG/ITIG)
+python3 ./src/generate.py ./sources/geneval.yaml --task NLG (or IU/IG/ITIG)
 ```
 
 2. Parallel Label Generation 
 
 Use vllm.py for parallel evaluation with the vllm backend. Organize the data into the same OpenAI format as the training set. Execute:
 ```
-python3 vllm.py --model_name_or_path MODEL_PATH --dataset DATA_PATH
+python3 ./src/vllm.py --model_name_or_path MODEL_PATH --dataset DATA_PATH
 ```
 
 ## Citation
