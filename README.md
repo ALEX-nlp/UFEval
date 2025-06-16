@@ -22,7 +22,7 @@ We believe that an ideal evaluator should be applicable to a wider range of scen
 | **GenEval (ours)** | ✓  | ✓  | ✓  | ✓    | ✓    | ✓     | 112    | ✓            | Synthetic & Human  |
 
 ## FRABench
-You can download our FRABench in Huggingface [FRABench](https://huggingface.co/datasets/SPUH/FRABench/tree/main). We provide the training set for GenEval and the corresponding testing set: FRA-ID, FRA-ID-H, FRA-OOD, FRA-OOD-H, and FRAUAs-OOD.
+You can download our FRABench in Huggingface [FRABench](https://huggingface.co/datasets/SPUH/FRABench). We provide the training set for GenEval and the corresponding testing set: FRA-ID, FRA-ID-H, FRA-OOD, FRA-OOD-H, and FRAUAs-OOD.
 
 | Dataset         | Description                                                                                  | Samples  | Split   |
 |-----------------|----------------------------------------------------------------------------------------------|----------|---------|
