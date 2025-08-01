@@ -19,7 +19,7 @@ We believe that an ideal evaluator should be applicable to a wider range of scen
 | ImageReward      | ✗   | ✗  | ✓  | ✗    | ✗    | ✓     | 3      | ✗            | Human              |
 | VisionReward     | ✗   | ✗  | ✓  | ✗    | ✗    | ✓     | 37     | ✗            | Human              |
 | LLaVA-Critic     | ✗   | ✓  | ✗  | ✗    | ✓    | ✗     | –      | ✗            | Synthetic          |
-| **GenEval (ours)** | ✓  | ✓  | ✓  | ✓    | ✓    | ✓     | 112    | ✓            | Synthetic & Human  |
+| **UFEval (ours)** | ✓  | ✓  | ✓  | ✓    | ✓    | ✓     | 112    | ✓            | Synthetic & Human  |
 
 ## FRABench
 You can download our FRABench in Huggingface [FRABench](https://huggingface.co/datasets/SPUH/FRABench). We provide the training set for GenEval and the corresponding testing set: FRA-ID, FRA-ID-H, FRA-OOD, FRA-OOD-H, and FRAUAs-OOD.
