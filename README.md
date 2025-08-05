@@ -5,24 +5,26 @@ This is the official repository for our paper: [UFEval: Unified Fine-grained Eva
 
 ## Introduction
 
-We propose FRABench, a large-scale pairwise evaluation dataset across four tasks - Natural Language Generation(NLG), Image Understanding(IU), Image Generation(IG), and Interleaved Text-and-Image Generation(ITIG)- comprising 28 sub-tasks and 60.4k pairwise samples with 325k evaluation labels, which is based on our constructed evaluation aspect tree. Our constructed aspect tree includes 112 distinct aspects, categorized into Universal Aspects (UAs) and Task-specific Aspects (TAs). Once the application scenario is specified, human or automated evaluators can simply traverse our aspect tree to select the relevant ones. This design dramatically lowers the cognitive load of defining evaluation standards and promotes consistency across tasks and modalities.
+We propose UFEval, the first unified fine-grained evaluator with task and aspect generalization for four evaluation tasks --- Natural Language Generation, Image Understanding, Image Generation, and Interleaved Text-and-Image Generation. Specifically, (1) We first construct a hierarchical aspect taxonomy encompassing 112 distinct aspects across the aforementioned four tasks. (2) Then, building upon this taxonomy, we create FRABench, a large-scale pairwise evaluation dataset across four tasks comprising 28 sub-tasks and 60.4k pairwise samples with 325k evaluation labels, which is based on our constructed evaluation aspect tree. Our constructed aspect tree includes 112 distinct aspects, categorized into Universal Aspects (UAs) and Task-specific Aspects (TAs). Once the application scenario is specified, human or automated evaluators can simply traverse our aspect tree to select the relevant ones. This design dramatically lowers the cognitive load of defining evaluation standards and promotes consistency across tasks and modalities. (3) Finally, leveraging FRABench, we develop UFEval, a unified fine-grained evaluator. 
 
-Based on FRABench, we propose GenEval, a 7B-parameter large multimodal model (LMM), which is the first evaluator capable of fine-grained evaluation across tasks and modalities. By leveraging aspect-level evaluation, it achieves generalization ability across both tasks and aspects. 
+Based on FRABench, we propose GenEval, a 7B-parameter large multimodal model (LMM), which is the first evaluator capable of fine-grained evaluation across tasks and modalities. Leveraging aspect-level evaluation achieves generalization ability across both tasks and aspects. 
 
-We believe that an ideal evaluator should be applicable to a wider range of scenarios. The comparison between related methods and GenEval is shown in the table below.
+We believe that an ideal evaluator should be applicable to a wider range of scenarios. The comparison between related methods and UFEval is shown in the table below.
 
 
-| Method           | NLG | IU | IG | ITIG | Text | Image | Aspect | Generalizable | Data Source        |
-|:----------------:|:---:|:--:|:--:|:----:|:----:|:-----:|:------:|:-------------:|:------------------:|
-| X-Eval           | ✓   | ✗  | ✗  | ✗    | ✓    | ✗     | 27     | ✓            | Human              |
-| Themis           | ✓   | ✗  | ✗  | ✗    | ✓    | ✗     | 50     | ✓            | Synthetic          |
-| ImageReward      | ✗   | ✗  | ✓  | ✗    | ✗    | ✓     | 3      | ✗            | Human              |
-| VisionReward     | ✗   | ✗  | ✓  | ✗    | ✗    | ✓     | 37     | ✗            | Human              |
-| LLaVA-Critic     | ✗   | ✓  | ✗  | ✗    | ✓    | ✗     | –      | ✗            | Synthetic          |
-| **UFEval (ours)** | ✓  | ✓  | ✓  | ✓    | ✓    | ✓     | 112    | ✓            | Synthetic & Human  |
+| Method           | NLG | IU | IG | ITIG | Text | Image | Aspect | 
+|:----------------:|:---:|:--:|:--:|:----:|:----:|:-----:|:------:|
+| Auto-J           | ✓   | ✗  | ✗  | ✗    | ✓    | ✗     | 332    | 
+| Prometheus 2     | ✓   | ✗  | ✗  | ✗    | ✓    | ✗     | -      | 
+| X-Eval           | ✓   | ✗  | ✗  | ✗    | ✓    | ✗     | 27     | 
+| Themis           | ✓   | ✗  | ✗  | ✗    | ✓    | ✗     | 50     | 
+| ImageReward      | ✗   | ✗  | ✓  | ✗    | ✗    | ✓     | 3      | 
+| VisionReward     | ✗   | ✗  | ✓  | ✗    | ✗    | ✓     | 37     | 
+| LLaVA-Critic     | ✗   | ✓  | ✗  | ✗    | ✓    | ✗     | –      | 
+| **UFEval (ours)** | ✓  | ✓  | ✓  | ✓    | ✓    | ✓     | 112    | 
 
 ## FRABench
-You can download our FRABench in Huggingface [FRABench](https://huggingface.co/datasets/SPUH/FRABench). We provide the training set for GenEval and the corresponding testing set: FRA-ID, FRA-ID-H, FRA-OOD, FRA-OOD-H, and FRAUAs-OOD.
+You can download our FRABench in Huggingface [FRABench](https://huggingface.co/datasets/SPUH/FRABench). We provide the training set for UFEval and the corresponding testing set: FRA-ID, FRA-ID-H, FRA-OOD, FRA-OOD-H, and FRAUAs-OOD.
 
 | Dataset         | Description                                                                                  | Samples  | Split   |
 |-----------------|----------------------------------------------------------------------------------------------|----------|---------|
@@ -46,7 +48,7 @@ pip install vllm
 ```
 
 ### Model
-Our GenEval-7B is now available on Huggingface: [GenEval](https://huggingface.co/SPUH/GenEval)
+Our UFEval-7B is now available on Huggingface: [UFEval](https://huggingface.co/SPUH/UFEval)
 
 ### Fine-tuning
 
