@@ -1,7 +1,7 @@
 
-# FRABench and GenEval: Scaling Fine-Grained Aspect Evaluation across Tasks, Modalities
+# UFEval: Unified Fine-grained Evaluation with Task and Aspect Generalization
 
-This is the official repository for our paper: [FRABench and GenEval: Scaling Fine-Grained Aspect Evaluation across Tasks, Modalities](https://arxiv.org/abs/2505.12795).
+This is the official repository for our paper: [UFEval: Unified Fine-grained Evaluation with Task and Aspect Generalization](https://arxiv.org/abs/2505.12795).
 
 ## Introduction
 
