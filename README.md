@@ -109,7 +109,7 @@ python3 ./src/vllm.py --model_name_or_path MODEL_PATH --dataset DATA_PATH
 ## Citation
 ```
 @article{hong2025frabench,
-  title={FRAbench and GenEval: Scaling Fine-Grained Aspect Evaluation across Tasks, Modalities},
+  title={UFEval: Unified Fine-grained Evaluation with Task and Aspect Generalization},
   author={Hong, Shibo and Ying, Jiahao and Liang, Haiyuan and Zhang, Mengdi and Kuang, Jun and Zhang, Jiazheng and Cao, Yixin},
   journal={arXiv preprint arXiv:2505.12795},
   year={2025}
