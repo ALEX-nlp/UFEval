@@ -93,8 +93,7 @@ Finally, you can leverage the [distributed training options](https://llamafactor
 We provide two approaches for evaluation:
 
 1. Sequential Label Generation
-2. 
-The generate.py script includes evaluation examples for four distinct tasks. Run the following command:
+2. The generate.py script includes evaluation examples for four distinct tasks. Run the following command:
 ```
 python3 ./src/generate.py ./sources/geneval.yaml --task NLG (or IU/IG/ITIG)
 ```
