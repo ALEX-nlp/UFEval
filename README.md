@@ -1,7 +1,7 @@
 
 # FRABench and UFEval: Unified Fine-grained Evaluation with Task and Aspect Generalization
 
-This is the official repository for our paper: [UFEval: Unified Fine-grained Evaluation with Task and Aspect Generalization](https://arxiv.org/abs/2505.12795).
+This is the official repository for our paper: [FRABench and UFEval: Unified Fine-grained Evaluation with Task and Aspect Generalization](https://arxiv.org/abs/2505.12795).
 
 ## Introduction
 
