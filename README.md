@@ -21,6 +21,7 @@ We believe that an ideal evaluator should be applicable to a wider range of scen
 | LLaVA-Critic     | ✗   | ✓  | ✗  | ✗    | ✓    | ✗     | –      | 
 | **UFEval (ours)** | ✓  | ✓  | ✓  | ✓    | ✓    | ✓     | 112    | 
 
+
 ## FRABench
 You can download our FRABench in Huggingface [FRABench](https://huggingface.co/datasets/SPUH/FRABench). We provide the training set for UFEval and the corresponding testing set: FRA-ID, FRA-ID-H, FRA-OOD, FRA-OOD-H, and FRAUAs-OOD.
 
@@ -108,7 +109,7 @@ python3 ./src/vllm.py --model_name_or_path MODEL_PATH --dataset DATA_PATH
 ## Citation
 ```
 @article{hong2025frabench,
-  title={UFEval: Unified Fine-grained Evaluation with Task and Aspect Generalization},
+  title={FRABench and UFEval: Unified Fine-grained Evaluation with Task and Aspect Generalization},
   author={Hong, Shibo and Ying, Jiahao and Liang, Haiyuan and Zhang, Mengdi and Kuang, Jun and Zhang, Jiazheng and Cao, Yixin},
   journal={arXiv preprint arXiv:2505.12795},
   year={2025}
